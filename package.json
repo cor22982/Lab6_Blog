@@ -2,9 +2,9 @@
   "name": "lab6_blog",
   "version": "1.0.0",
   "description": "blog",
-  "main": "index.js",
+  "main": "node ./src/main.js|",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node ./src/main.js"
   },
   "repository": {
     "type": "git",
@@ -18,5 +18,6 @@
   "homepage": "https://github.com/cor22982/Lab6_Blog#readme",
   "dependencies": {
     "express": "^4.18.3"
-  }
+  },
+  "type": "module"
 }
