@@ -1,0 +1,22 @@
+{
+  "name": "lab6_blog",
+  "version": "1.0.0",
+  "description": "blog",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cor22982/Lab6_Blog.git"
+  },
+  "author": "Mathew Cordero",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cor22982/Lab6_Blog/issues"
+  },
+  "homepage": "https://github.com/cor22982/Lab6_Blog#readme",
+  "dependencies": {
+    "express": "^4.18.3"
+  }
+}
