@@ -1,15 +1,16 @@
 import express from 'express'
+// eslint-disable-next-line import/no-extraneous-dependencies
+import cors from 'cors'
 import {
   getAllPosts,
   getOnePost,
   createPost,
   editOnePost,
   deletePost,
-} from './db'
+// eslint-disable-next-line import/extensions
+} from './db.js'
 
 const app = express()
-// eslint-disable-next-line import/no-extraneous-dependencies
-const cors = require('cors')
 
 app.use(express.json())
 app.use(cors())

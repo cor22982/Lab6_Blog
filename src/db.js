@@ -1,4 +1,5 @@
-import conn from './conn'
+// eslint-disable-next-line import/extensions
+import conn from './conn.js'
 
 export async function getAllPosts() {
   const [rows] = await conn.query('SELECT * FROM Guatepedia')
