@@ -1,12 +1,12 @@
 import express from 'express'
-// eslint-disable-next-line import/extensions
-import { getAllPosts, getOnePost } from './db.js'
+import { getAllPosts, getOnePost, createPost } from './db'
+
+const app = express()
 // eslint-disable-next-line import/no-extraneous-dependencies
 const cors = require('cors')
 
-const app = express()
-app.use(cors())
 app.use(express.json())
+app.use(cors())
 
 app.get('/posts', async (req, res) => {
   const posts = await getAllPosts()
@@ -14,9 +14,34 @@ app.get('/posts', async (req, res) => {
 })
 app.get('/posts/:postId', async (req, res) => {
   const { postId } = req.params
-  // eslint-disable-next-line no-undef
   const post = await getOnePost(postId)
   res.status(200).json(post)
+})
+
+app.post('/posts', async (req, res) => {
+  const {
+    Pearson,
+    Fewdescription,
+    History,
+    Crucialevents,
+    Curiosities,
+    AlternativeText,
+    AlternativeDescription,
+    Textreferences,
+    images,
+  } = req.body
+  const result = await createPost(
+    Pearson,
+    Fewdescription,
+    History,
+    Crucialevents,
+    Curiosities,
+    AlternativeText,
+    AlternativeDescription,
+    Textreferences,
+    images,
+  )
+  res.status(201).json(result)
 })
 
 const PORT = process.env.PORT || 3000

@@ -2,7 +2,7 @@
 FROM mysql:latest
 
 # Set environment variables for MySQL
-ENV MYSQL_DATABASE=blog_db
+ENV MYSQL_DATABASE=Guatepedia
 ENV MYSQL_ROOT_PASSWORD=36L8W7Nm
 # Optionally, define the default user and password (if needed)
 ENV MYSQL_USER=mysql
