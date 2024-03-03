@@ -1,5 +1,10 @@
 import express from 'express'
-import { getAllPosts, getOnePost, createPost } from './db'
+import {
+  getAllPosts,
+  getOnePost,
+  createPost,
+  editOnePost,
+} from './db'
 
 const app = express()
 // eslint-disable-next-line import/no-extraneous-dependencies
@@ -41,14 +46,28 @@ app.post('/posts', async (req, res) => {
     Textreferences,
     images,
   )
-  res.status(201).json(result)
+  res.status(200).json(result)
 })
 
 const PORT = process.env.PORT || 3000
 app.listen(PORT, () => {
-
+  console.log(`Server listening at http://127.0.0.1:${PORT}`)
 })
 
 app.get('/', (req, res) => {
   res.send('Hello from API BLOG')
+})
+
+app.put('/posts/:postId', async (req, res) => {
+  const { postId } = req.params
+  const {
+    columna,
+    valor,
+  } = req.body
+  const result = await editOnePost(
+    postId,
+    columna,
+    valor,
+  )
+  res.status(200).json(result)
 })
