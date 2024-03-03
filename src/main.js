@@ -4,6 +4,7 @@ import {
   getOnePost,
   createPost,
   editOnePost,
+  deletePost,
 } from './db'
 
 const app = express()
@@ -70,4 +71,10 @@ app.put('/posts/:postId', async (req, res) => {
     valor,
   )
   res.status(200).json(result)
+})
+
+app.delete('/posts/:postId', async (req, res) => {
+  const { postId } = req.params
+  const post = await deletePost(postId)
+  res.status(200).json(post)
 })

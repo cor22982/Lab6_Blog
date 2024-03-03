@@ -41,3 +41,8 @@ export async function editOnePost(postId, columna, valor) {
   const [result] = await conn.query('UPDATE Guatepedia SET ? = ? WHERE id = ?', [columna, valor, postId])
   return result
 }
+
+export async function deletePost(postId) {
+  const [result] = await conn.query('DELETE Guatepedia WHERE id = ?', [postId])
+  return result
+}
