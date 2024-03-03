@@ -75,7 +75,7 @@ app.post('/posts', async (req, res) => {
     )
     res.status(200).json(result)
   } catch (error) {
-    res.status(500).json({ error: 'Error interno del servidor' })
+    res.status(500).json({ error: error.message, stack: error.stack })
   }
 })
 
@@ -93,7 +93,7 @@ app.put('/posts/:postId', async (req, res) => {
     )
     res.status(200).json(result)
   } catch (error) {
-    res.status(500).json({ error: 'Error interno del servidor' })
+    res.status(500).json({ errors: error.array() })
   }
 })
 
@@ -103,7 +103,7 @@ app.delete('/posts/:postId', async (req, res) => {
     const post = await deletePost(postId)
     res.status(200).json(post)
   } catch (error) {
-    res.status(500).json({ error: 'Error interno del servidor' })
+    res.status(500).json({ error: error.message, stack: error.stack })
   }
 })
 app.use((req, res) => {

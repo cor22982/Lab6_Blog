@@ -44,6 +44,7 @@ export async function editOnePost(postId, columna, valor) {
 }
 
 export async function deletePost(postId) {
-  const [result] = await conn.query('DELETE Guatepedia WHERE id = ?', [postId])
+  const postIdnumb = Number(postId)
+  const [result] = await conn.query('DELETE FROM Guatepedia WHERE id = ?', [postIdnumb])
   return result
 }
