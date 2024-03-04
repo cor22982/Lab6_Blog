@@ -1,0 +1,48 @@
+*{
+  background-color: #0b1416;
+  
+}
+h1.Titulo_Principal{
+  display: flex;
+  background-color: transparent;
+  font-size: 80px;
+  justify-content: center;
+  font-family: monospace; /* Utiliza una fuente monoespaciada */
+  color: white; /* Utiliza un color verde típico de muchas terminales */
+  margin-bottom: 0px;
+  transform: translateY(-105%)
+  
+}
+.imagen {
+  width: 100%; /* Cambia el ancho según lo necesites */
+  height: 200; /* Altura automática para mantener la proporción */
+  object-fit: cover;
+}
+
+.Contenedor_Botones{
+  margin-top: 0px;
+  display: flex;
+  justify-content: space-around;
+  
+}
+.botonesinicio{
+  border-radius: 10px;
+  background-color: white;
+  font-size: 25px;
+  width: 600px; 
+  height: 50px;
+}
+
+i{
+  background-color: transparent;
+}
+
+.CotenedorPosts{
+  margin-top: 100px;
+  margin-right: 200px;
+}
+
+.post{
+  background-color: white;
+  height: 200px; 
+}
