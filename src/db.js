@@ -34,15 +34,17 @@ export async function createPost(
 }
 
 export async function getOnePost(postId) {
-  const [result] = await conn.query('SELECT * FROM Guatepedia WHERE id = ?', [postId])
+  const postIdnumb = Number(postId)
+  const [result] = await conn.query('SELECT * FROM Guatepedia WHERE id = ?', [postIdnumb])
   return result
 }
 
 export async function editOnePost(postId, columna, valor) {
-  const [result] = await conn.query('UPDATE Guatepedia SET ? = ? WHERE id = ?', [columna, valor, postId])
+  const postIdnumb = Number(postId)
+  const sql = `UPDATE Guatepedia SET ${columna} = ? WHERE id = ?`
+  const [result] = await conn.query(sql, [valor, postIdnumb])
   return result
 }
-
 export async function deletePost(postId) {
   const postIdnumb = Number(postId)
   const [result] = await conn.query('DELETE FROM Guatepedia WHERE id = ?', [postIdnumb])

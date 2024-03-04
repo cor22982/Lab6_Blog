@@ -14,7 +14,7 @@ const app = express()
 const validateRequest = (req, res, next) => {
   const errors = validationResult(req)
   if (!errors.isEmpty()) {
-    return res.status(400).json({ errors: errors.array() })
+    return res.status(400).json({ errors: 'No mandaste los campos correctos' })
   }
   return next()
 }
@@ -75,7 +75,7 @@ app.post('/posts', async (req, res) => {
     )
     res.status(200).json(result)
   } catch (error) {
-    res.status(500).json({ error: error.message, stack: error.stack })
+    res.status(500).json({ error: 'Error del servidor.' })
   }
 })
 
@@ -93,7 +93,7 @@ app.put('/posts/:postId', async (req, res) => {
     )
     res.status(200).json(result)
   } catch (error) {
-    res.status(500).json({ errors: error.array() })
+    res.status(500).json({ error: 'Error del servidor.' })
   }
 })
 
@@ -103,7 +103,7 @@ app.delete('/posts/:postId', async (req, res) => {
     const post = await deletePost(postId)
     res.status(200).json(post)
   } catch (error) {
-    res.status(500).json({ error: error.message, stack: error.stack })
+    res.status(500).json({ error: 'Error del servidor.' })
   }
 })
 app.use((req, res) => {
