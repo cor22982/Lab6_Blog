@@ -33,6 +33,10 @@ h1.Titulo_Principal{
   height: 50px;
 }
 
+.botonesinicio:hover{
+  background-color: rgb(224, 224, 224);
+}
+
 i{
   background-color: transparent;
 }
@@ -46,10 +50,13 @@ i{
   background-color: #101214;
   height: 900px;
   margin-left: 10px;
-  border-radius: 5px;
+  border-radius: 7px;
   display: grid;
   width: 900px; 
   grid-template-rows: 1fr 2fr 6fr 1fr;
+}
+.post:hover{
+  background-color: #232527;
 }
 .titulo{
   grid-row: 1;
@@ -91,9 +98,15 @@ i{
   background-color: #232629;
   border-radius: 20px;
   margin-left: 10px;
+  border-color: transparent;
 }
 
 i.bottonicono{
   color: #888a8d;
   font-size: 30px;
 }
+
+.edit:hover , .delete:hover {
+  background-color: #404447;
+}
+
