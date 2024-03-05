@@ -1,5 +1,5 @@
 *{
-  background-color: #0b1416;
+  background-color: black;
   
 }
 h1.Titulo_Principal{
@@ -43,6 +43,57 @@ i{
 }
 
 .post{
-  background-color: white;
-  height: 200px; 
+  background-color: #101214;
+  height: 900px;
+  margin-left: 10px;
+  border-radius: 5px;
+  display: grid;
+  width: 900px; 
+  grid-template-rows: 1fr 2fr 6fr 1fr;
+}
+.titulo{
+  grid-row: 1;
+  font-size: 40px;
+  background-color: transparent;
+  color: white;
+  margin-left: 20px;
+  margin-top: 20px;
+}
+
+.brief{
+  grid-row: 2;
+  font-size: 20px;
+  background-color: transparent;
+  color: lightgray;
+  margin-left: 20px;
+  margin-top: 20px;
+  margin-right: 10px;
+}
+
+.imagenpost{
+  grid-row: 3;
+  background-color: transparent;
+  width: 850px;
+  height: 550px;
+  margin-left: 20px;
+  object-fit: cover;
+}
+
+.botonarea{
+  margin-top: 10px;
+  grid-row: 4;
+  background-color: transparent;
+}
+
+.edit, .delete {
+  width: 100px;
+  height: 50px;
+  background-color: #232629;
+  border-radius: 20px;
+  margin-left: 10px;
+}
+
+i.bottonicono{
+  color: #888a8d;
+  font-size: 30px;
 }

@@ -75,7 +75,7 @@ app.post('/posts', async (req, res) => {
     )
     res.status(200).json(result)
   } catch (error) {
-    res.status(500).json({ error: error.message, stack: error.stack })
+    res.status(500).json({ error: 'Error interno del servidor' })
   }
 })
 
