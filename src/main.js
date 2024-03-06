@@ -27,7 +27,7 @@ app.get('/posts', async (req, res) => {
     const posts = await getAllPosts()
     res.status(200).json(posts)
   } catch (error) {
-    res.status(500).json({ error: 'Error interno del servidor' })
+    res.status(500).json({ error: error.message })
   }
 })
 app.get('/posts/:postId', async (req, res) => {

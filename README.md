@@ -1,1 +1,2 @@
-# Lab6_Blog
+# Lab6_Blog GUATEPEDIA
+
