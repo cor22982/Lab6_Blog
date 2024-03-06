@@ -1,7 +1,4 @@
-<<<<<<< HEAD
-# Lab6_Blog GUATEPEDIA
 
-=======
 # Lab6_Blog Guatepedia
 ## Descripcion 
 Guatepedia es un blog personal que muestra todas las personalidades de internet de la cultura guatemalteca.
@@ -106,4 +103,3 @@ https://api.tiburoncin.lat/22982/
 ```
 ## Link API publicada
 https://api.tiburoncin.lat/22982/
->>>>>>> cc404bfc1088959bb03da1e021d2db1b16e2b6ed
