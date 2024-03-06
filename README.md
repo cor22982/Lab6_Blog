@@ -78,7 +78,7 @@ Es devuelto si se trate de utilizar un metodo no implementado de http
 Para poder ejecutar este codigo debe de hacer lo siguiente en su consola y en la carpeta de clonacion
 - Crear imagen del docker
 ```
-docker build -t mysql-blog-image
+ docker build -t mysql-blog-image .
 ```
 - Crear el contenedor del docker
 ```
